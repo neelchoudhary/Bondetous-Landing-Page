@@ -1,0 +1,18 @@
+import React from 'react'
+
+export default class Interested extends React.Component {
+
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        return (
+            <div className='section sign-up-banner'>
+                <p className='section-subtitle'>Sign up to our mailing list to stay informed.</p>
+                <button className='sign-up btn-clear'>Sign Up!</button>
+            </div>
+        )
+    }
+
+}
