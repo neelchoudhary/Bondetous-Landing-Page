@@ -15,7 +15,6 @@ export default class Benefits extends React.Component {
             host2: require('../images/hostbrt3.png'),
             host3: require('../images/hostbrt2.png'),
         }
-
         return (
             <div className='section benefits' id='benefits-section'>
                 {this.props.userView === true ? (
@@ -36,6 +35,7 @@ export default class Benefits extends React.Component {
             </div>
         )
     }
+
 }
 
 function BenefitsTile({ img, title, desc }) {
@@ -55,12 +55,12 @@ function BenefitsTile({ img, title, desc }) {
 function BenefitsTileReverse({ img, title, desc }) {
     return (
         <div className='benefit-tile'>
+            <div className='img-div'>
+                <img src={img} alt="Benefit" />
+            </div>
             <div className='text-div-reverse'>
                 <h3 className='section-title'>{title}</h3>
                 <p className='section-body'>{desc}</p>
-            </div>
-            <div className='img-div'>
-                <img src={img} alt="Benefit" />
             </div>
         </div>
     )

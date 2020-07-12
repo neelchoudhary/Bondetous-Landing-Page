@@ -62,18 +62,40 @@ html, body, #app .App {
   border-radius: 3px;
 }
 
-.section {
-  padding: 0px 90px;
+@media (min-width: 1201px) {
+  .section {
+    padding: 0px 90px;
+  }
 }
 
-.main {
-  display: flex;
-  height: 90vh;
+@media (max-width: 1200px) {
+  .section {
+    padding: 0px 6%;
+  }
+}
+
+
+@media (min-width: 1201px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .main #info-card {
   flex: 4;
   padding: 20px;
+  max-width: 520px;
 }
 
 #info-card h3 {
@@ -90,12 +112,15 @@ html, body, #app .App {
 
 #info-card button {
   padding: 10px 20px;
+  margin: 10px 10px;
   font-size: 20px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
 }
 
 .main .img-div {
+  margin-top: 60px;
+  margin-bottom: 60px;
   flex: 8;
 }
 
@@ -107,39 +132,62 @@ html, body, #app .App {
 
 .benefits {
   background-color: rgba(136,3,209,0.2);
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.benefits .benefit-tile {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 70px;
+@media (min-width: 1201px) {
+  .benefits .benefit-tile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 10%;
+  }
+  
+  .benefits .text-div-reverse {
+    flex: 2;
+    order: 0;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .benefits .benefit-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+    text-align: center;
+  }
+  
+  .benefits .text-div-reverse {
+    flex: 2;
+    order: 2;
+  }
+}
+
+.benefits .img-div {
+  flex: 1;
+  order: 1;
+}
+
+.benefits .text-div {
+  flex: 2;
+  order: 2;
 }
 
 .benefits img {
   box-sizing: border-box;
-  max-width:100%;
+  max-width:320px;
   max-height: 100%;
   height:auto;
   padding: 20px;
 }
 
-.benefits .img-div {
-  flex: 1;
-}
-
-.benefits .text-div {
-  flex: 2;
-  margin-left: 50px;
-}
-
-.benefits .text-div-reverse {
-  flex: 2;
-  margin-right: 50px;
-}
 
 .platform-demo {
-  padding: 60px 70px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,6 +195,7 @@ html, body, #app .App {
 
 .platform-demo .img-div {
   margin-top: 20px;
+  text-align: center;
 }
 
 .platform-demo .platform-img {
@@ -161,7 +210,9 @@ html, body, #app .App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 0px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
 }
 
 .sign-up-banner button {
@@ -177,7 +228,8 @@ html, body, #app .App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 70px 20px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .about-us .img-div {
@@ -235,7 +287,9 @@ html, body, #app .App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 70px 70px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  text-align: center;
 }
 
 .sign-up-section p {
@@ -246,10 +300,20 @@ html, body, #app .App {
   margin-bottom: 40px;
 }
 
-.sign-up-section .sign-up-form {
-  width: 40%;
-  margin-top: 50px;
-  margin-bottom: 70px;
+@media (max-width: 800px) {
+  .sign-up-section .sign-up-form {
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+}
+
+@media (min-width: 801px) {
+  .sign-up-section .sign-up-form {
+    width: 40%;
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
 }
 
 .sign-up-section .form-fields{
@@ -298,7 +362,19 @@ html, body, #app .App {
   margin: 10px;
 }
 
-
 .carousel {
+  margin-top: 20px;
   max-width: 300px;
+}
+
+@media (max-width: 800px) {
+  .large {
+    display: none
+  }
+}
+
+@media (min-width: 801px) {
+  .small {
+    display: none
+  }
 }
