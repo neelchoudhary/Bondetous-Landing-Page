@@ -26,7 +26,7 @@ export default class Platform extends React.Component {
                 <h3 className='section-title'>Our Platform</h3>
                 <p className='section-subtitle'>Convenient storage in just a few taps.</p>
                 <div className='img-div large'>
-                    {this.userView === true ?
+                    {this.props.userView === true ?
                         (
                             <React.Fragment>
                                 <img className='platform-img' src={require("../images/screen_user1.png")} alt="User Screen 1" />
@@ -44,7 +44,7 @@ export default class Platform extends React.Component {
                         )
                     }
                 </div>
-                {this.userView === true ?
+                {this.props.userView === true ?
                     <Carousel className='carousel small' showThumbs={false} showIndicators={false} showStatus={false} onChange={this.changeSelected}>
                         <div>
                             <img src={require("../images/screen_user1.png")} alt='User Screen 1' />
