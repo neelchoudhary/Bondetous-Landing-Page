@@ -18,7 +18,7 @@ export default class Header extends React.Component {
                 <div id='info-card'>
                     <h3>Affordable Storage, <br />On Your Time</h3>
                     <p>Book storage when you want it, where you want it. Risk-free and painlessly.</p>
-                    <button className='sign-up btn-clear'>Sign Up</button>
+                    <button className='sign-up btn-clear' onClick={() => (window.location.href='#sign-up-section')}>Sign Up</button>
                     <button className='host-view btn-clear' onClick={() => this.props.switchView()}>{switchBtnText}</button>
                 </div>
                 <div className='img-div'>

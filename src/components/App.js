@@ -26,7 +26,7 @@ export default class App extends React.Component {
       this.setState({userView: true})
     }
   }
-
+  
   render() {
     return (
       <React.Fragment>
