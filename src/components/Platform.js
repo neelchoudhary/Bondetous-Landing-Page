@@ -36,32 +36,28 @@ export default class Platform extends React.Component {
                             </React.Fragment>) :
                         (
                             <React.Fragment>
-                                <img className='platform-img' src={require("../images/screen_user1.png")} alt="User Screen 1" />
-                                <img className='platform-img' src={require("../images/screen_user2.png")} alt="User Screen 2" />
-                                <img className='platform-img' src={require("../images/screen_user3.png")} alt="User Screen 3" />
-                                <img className='platform-img' src={require("../images/screen_user4.png")} alt="User Screen 4" />
+                                <img className='platform-img' src={require("../images/screen_user1.png")} alt="Host Screen 1" />
+                                <img className='platform-img' src={require("../images/screen_user2.png")} alt="Host Screen 2" />
+                                <img className='platform-img' src={require("../images/screen_user3.png")} alt="Host Screen 3" />
+                                <img className='platform-img' src={require("../images/screen_user4.png")} alt="Host Screen 4" />
                             </React.Fragment>
                         )
                     }
                 </div>
                 <Carousel className='carousel small' showThumbs={false} showIndicators={false} showStatus={false} onChange={this.changeSelected}>
                     <div>
-                        <img src={require("../images/screen_user1.png")} />
+                        <img src={require("../images/screen_user1.png")} alt='User Screen 1' />
                     </div>
                     <div>
-                        <img src={require("../images/screen_user2.png")} />
+                        <img src={require("../images/screen_user2.png")} alt='User Screen 2' />
                     </div>
                     <div>
-                        <img src={require("../images/screen_user3.png")} />
+                        <img src={require("../images/screen_user3.png")} alt='User Screen 3s' />
                     </div>
                     <div>
-                        <img src={require("../images/screen_user4.png")} />
+                        <img src={require("../images/screen_user4.png")} alt='User Screen 4' />
                     </div>
                 </Carousel>
-                <div>
-
-                </div>
-
             </div>
         )
     }

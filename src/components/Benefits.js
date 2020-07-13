@@ -2,10 +2,6 @@ import React from 'react'
 
 export default class Benefits extends React.Component {
 
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         let images = {
             user1: require('../images/benefit_user1.png'),

@@ -1,4 +1,5 @@
 import React from 'react'
+import SideMenu from './SideMenu';
 
 export default class NavBar extends React.Component {
 
@@ -22,7 +23,7 @@ export default class NavBar extends React.Component {
     }
 
     render() {
-        if (this.state.width > 900) {
+        if (this.state.width > 950) {
             return (
                 <nav id='top-bar'>
                     <div id='left-side'>
@@ -44,7 +45,17 @@ export default class NavBar extends React.Component {
                 </nav>
             )
         } else {
-            return null
+            return (
+                <React.Fragment>
+                    <SideMenu />
+                    <nav id='top-bar'>
+                        <div id='left-side'>
+                            <img id='company-logo' src={require("../images/logo_web.png")} alt="Logo" />
+                        </div>
+                    </nav>
+                </React.Fragment>
+
+            )
         }
     }
 

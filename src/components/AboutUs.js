@@ -44,13 +44,13 @@ export default class AboutUs extends React.Component {
                 <div className="img-div">
                     <Carousel className='carousel' showThumbs={false} showIndicators={false} showStatus={false} onChange={this.changeSelected} infiniteLoop={true}>
                         <div>
-                            <img src={require("../images/founder_jovan.png")} />
+                            <img src={require("../images/founder_jovan.png")} alt='Profile' />
                         </div>
                         <div>
-                            <img src={require("../images/founder_neel.png")} />
+                            <img src={require("../images/founder_neel.png")} alt='Profile' />
                         </div>
                         <div>
-                            <img src={require("../images/founder_linda.png")} />
+                            <img src={require("../images/founder_linda.png")} alt='Profile' />
                         </div>
                     </Carousel>
                 </div>

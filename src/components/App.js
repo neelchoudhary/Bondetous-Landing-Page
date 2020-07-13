@@ -6,6 +6,8 @@ import Interested from './Interested';
 import NavBar from './NavBar';
 import AboutUs from './AboutUs';
 import SignUp from './SignUp';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+
 
 export default class App extends React.Component {
 
@@ -21,24 +23,36 @@ export default class App extends React.Component {
 
   onSwitchView() {
     if (this.state.userView === true) {
-      this.setState({userView: false})
+      this.setState({ userView: false })
     } else {
-      this.setState({userView: true})
+      this.setState({ userView: true })
     }
   }
-  
+
   render() {
     return (
-      <React.Fragment>
-        <NavBar userView={this.state.userView}/>
-        <Header userView={this.state.userView} switchView={this.onSwitchView}/>
-        <Benefits userView={this.state.userView}/>
-        <Platform userView={this.state.userView}/>
-        <Interested userView={this.state.userView}/>
-        <AboutUs userView={this.state.userView}/>
-        <SignUp userView={this.state.userView}/>
-      </React.Fragment>
+      <Router>
+        <Switch>
+          <Route exact path='/' render={() => (<LandingPage userView={true} switchView={this.onSwitchView}/>)} />
+          <Route path='/hosts' render={() => (<LandingPage userView={false} switchView={this.onSwitchView}/>)} />
+          <Redirect from='/user' to='/' />
+          <Route render={() => (<h1>404 Page Not Found</h1>)} />
+        </Switch>
+      </Router>
     )
   }
 }
 
+function LandingPage({ userView, switchView }) {
+  return (
+    <React.Fragment>
+      <NavBar userView={userView} />
+      <Header userView={userView} switchView={switchView} />
+      <Benefits userView={userView} />
+      <Platform userView={userView} />
+      <Interested userView={userView} />
+      <AboutUs userView={userView} />
+      <SignUp userView={userView} />s
+    </React.Fragment>
+  )
+}
