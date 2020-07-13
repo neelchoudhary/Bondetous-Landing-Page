@@ -8,12 +8,12 @@ export default class Benefits extends React.Component {
 
     render() {
         let images = {
-            user1: require('../images/bruh4.png'),
-            user2: require('../images/bruh8.png'),
-            user3: require('../images/bruh9.png'),
-            host1: require('../images/hostbrt1.png'),
-            host2: require('../images/hostbrt3.png'),
-            host3: require('../images/hostbrt2.png'),
+            user1: require('../images/benefit_user1.png'),
+            user2: require('../images/benefit_user2.png'),
+            user3: require('../images/benefit_user3.png'),
+            host1: require('../images/benefit_host1.png'),
+            host2: require('../images/benefit_host2.png'),
+            host3: require('../images/benefit_host3.png'),
         }
         return (
             <div className='section benefits' id='benefits-section'>

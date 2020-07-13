@@ -22,7 +22,7 @@ export default class Header extends React.Component {
                     <button className='host-view btn-clear' onClick={() => this.props.switchView()}>{switchBtnText}</button>
                 </div>
                 <div className='img-div'>
-                    <img id='background-img' src={require('../images/background.jpg')} alt="Bondetous Background" />
+                    <img id='background-img' src={require('../images/header_background.png')} alt="Bondetous Background" />
                 </div>
             </div>
         )

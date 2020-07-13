@@ -23,8 +23,6 @@ export default class AboutUs extends React.Component {
         const NeelFounder = FounderBio({ name: 'Neel Choudhary', title: 'COO', desc: "Neel Choudhary is the chief operating officer of Bondetous. Neel is attending Northeastern University and is pursuing a bachelor’s degree in computer science with a concentration in Artificial intelligence. Neel has experience working in the industry as a software engineer.", email:'choudhary.ne@northeastern.edu', linkedin: 'https://www.linkedin.com/in/neelchoudhary'})
         const LindaFounder = FounderBio({ name: 'Linda Zeng', title: 'Lead Designer', desc: "Linda Zeng is the lead designer of Bondetous. Linda is attending Northeastern University pursuing a bachelor’s degree in Civil Engineering with a concentration in Structural Engineering and a minor in Experience Design. Her main interests revolve around design, painting, and volunteering.", email:'zeng.lin@northeastern.edu', linkedin: 'https://www.linkedin.com/in/linda-zeng-3809b318b'})
 
-        // const NeelFounder = FounderBio("gge", "ge", "geg", "afa", "agag")
-        // const LindaFounder = FounderBio("age", "ge", "geg", "afa", "agag")
         let Founder;
         if (this.state.selected === 0) {
             // Jovan
@@ -46,28 +44,20 @@ export default class AboutUs extends React.Component {
                 <div className="img-div">
                     <Carousel className='carousel' showThumbs={false} showIndicators={false} showStatus={false} onChange={this.changeSelected} infiniteLoop={true}>
                         <div>
-                            <img src={require("../images/jean.png")} />
+                            <img src={require("../images/founder_jovan.png")} />
                         </div>
                         <div>
-                            <img src={require("../images/neel.png")} />
+                            <img src={require("../images/founder_neel.png")} />
                         </div>
                         <div>
-                            <img src={require("../images/linda.png")} />
+                            <img src={require("../images/founder_linda.png")} />
                         </div>
                     </Carousel>
-                    {/* <img src={require("../images/linda.png")} alt="Linda Profile" />
-                    <img src={require("../images/jean.png")} alt="Jovan Profile" />
-                    <img src={require("../images/neel.png")} alt="Neel Profile" /> */}
                 </div>
-                {/* <FounderBio name='Jovan Jean' title='CEO' desc="Jovan Jean is the chief executive officer of Bondetous. Jovan is attending Northeastern University and pursuing a bachelor's degree in computer science with a focus in Artificial Intelligence." email='#' linkedin='#' /> */}
                 <Founder />
             </div>
         )
     }
-}
-
-let x = function () {
-
 }
 
 function FounderBio({ name, title, desc, email, linkedin }) {

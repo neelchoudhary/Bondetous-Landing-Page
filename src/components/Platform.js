@@ -17,20 +17,10 @@ export default class Platform extends React.Component {
 
 
     changeSelected(index) {
-        console.log(index)
         this.setState({ selected: index })
-        console.log('selected', this.state.selected)
     }
 
     render() {
-        let images = [
-            { url: require("../images/userscreen1.png") },
-            { url: require("../images/userscreen2.png") },
-            { url: require("../images/userscreen3.png") },
-            { url: require("../images/userscreen4.png") },
-        ];
-
-
         return (
             <div className='section platform-demo' id='platform-section'>
                 <h3 className='section-title'>Our Platform</h3>
@@ -39,33 +29,33 @@ export default class Platform extends React.Component {
                     {this.userView === true ?
                         (
                             <React.Fragment>
-                                <img className='platform-img' src={require("../images/userscreen1.png")} alt="User Screen 1" />
-                                <img className='platform-img' src={require("../images/userscreen2.png")} alt="User Screen 2" />
-                                <img className='platform-img' src={require("../images/userscreen3.png")} alt="User Screen 3" />
-                                <img className='platform-img' src={require("../images/userscreen4.png")} alt="User Screen 4" />
+                                <img className='platform-img' src={require("../images/screen_user1.png")} alt="User Screen 1" />
+                                <img className='platform-img' src={require("../images/screen_user2.png")} alt="User Screen 2" />
+                                <img className='platform-img' src={require("../images/screen_user3.png")} alt="User Screen 3" />
+                                <img className='platform-img' src={require("../images/screen_user4.png")} alt="User Screen 4" />
                             </React.Fragment>) :
                         (
                             <React.Fragment>
-                                <img className='platform-img' src={require("../images/userscreen1.png")} alt="User Screen 1" />
-                                <img className='platform-img' src={require("../images/userscreen2.png")} alt="User Screen 2" />
-                                <img className='platform-img' src={require("../images/userscreen3.png")} alt="User Screen 3" />
-                                <img className='platform-img' src={require("../images/userscreen4.png")} alt="User Screen 4" />
+                                <img className='platform-img' src={require("../images/screen_user1.png")} alt="User Screen 1" />
+                                <img className='platform-img' src={require("../images/screen_user2.png")} alt="User Screen 2" />
+                                <img className='platform-img' src={require("../images/screen_user3.png")} alt="User Screen 3" />
+                                <img className='platform-img' src={require("../images/screen_user4.png")} alt="User Screen 4" />
                             </React.Fragment>
                         )
                     }
                 </div>
                 <Carousel className='carousel small' showThumbs={false} showIndicators={false} showStatus={false} onChange={this.changeSelected}>
                     <div>
-                        <img src={require("../images/userscreen1.png")} />
+                        <img src={require("../images/screen_user1.png")} />
                     </div>
                     <div>
-                        <img src={require("../images/userscreen2.png")} />
+                        <img src={require("../images/screen_user2.png")} />
                     </div>
                     <div>
-                        <img src={require("../images/userscreen3.png")} />
+                        <img src={require("../images/screen_user3.png")} />
                     </div>
                     <div>
-                        <img src={require("../images/userscreen4.png")} />
+                        <img src={require("../images/screen_user4.png")} />
                     </div>
                 </Carousel>
                 <div>
