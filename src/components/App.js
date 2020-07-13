@@ -52,7 +52,7 @@ function LandingPage({ userView, switchView }) {
       <Platform userView={userView} />
       <Interested userView={userView} />
       <AboutUs userView={userView} />
-      <SignUp userView={userView} />s
+      <SignUp userView={userView} />
     </React.Fragment>
   )
 }
