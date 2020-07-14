@@ -24,6 +24,10 @@ html, body, #app .App {
   top: 0;
 }
 
+#top-bar #left-side-link {
+  text-decoration: none;
+}
+
 #left-side {
   display: flex;
   align-items: center;
@@ -38,6 +42,7 @@ html, body, #app .App {
 #company-name {
   font-weight:  400;
   font-size: 22px;
+  color: black;
 }
 
 #nav-bar {

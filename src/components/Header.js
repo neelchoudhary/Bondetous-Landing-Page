@@ -14,7 +14,7 @@ export default class Header extends React.Component {
             url = "/"
         }
         return (
-            <div className='section main'>
+            <div className='section main' id='header-section'>
                 <div id='info-card'>
                     <h3>Affordable Storage, <br />On Your Time</h3>
                     <p>Book storage when you want it, where you want it. Risk-free and painlessly.</p>

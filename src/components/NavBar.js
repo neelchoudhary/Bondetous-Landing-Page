@@ -26,16 +26,18 @@ export default class NavBar extends React.Component {
         if (this.state.width > 950) {
             return (
                 <nav id='top-bar'>
-                    <div id='left-side'>
-                        <img id='company-logo' src={require("../images/logo_web.png")} alt="Logo" />
-                        {this.props.userView === true ? (
-                            <h2 id='company-name'>Bondetous</h2>
-                        ) :
-                            (
-                                <h2 id='company-name'>Bondetous <br /> for hosts</h2>
-                            )
-                        }
-                    </div>
+                    <a href="/#" id='left-side-link'>
+                        <div id='left-side'>
+                            <img id='company-logo' src={require("../images/logo_web.png")} alt="Logo" />
+                            {this.props.userView === true ? (
+                                <h2 id='company-name'>Bondetous</h2>
+                            ) :
+                                (
+                                    <h2 id='company-name'>Bondetous <br /> for hosts</h2>
+                                )
+                            }
+                        </div>
+                    </a>
                     <ul id='nav-bar'>
                         <li><a href='#benefits-section'>Benefits</a></li>
                         <li><a href='#platform-section'>Getting Started</a></li>
@@ -44,14 +46,38 @@ export default class NavBar extends React.Component {
                     </ul>
                 </nav>
             )
+        } else if (this.state.width > 400) {
+            return (
+                <React.Fragment>
+                    <SideMenu />
+                    <nav id='top-bar'>
+                        <a href="/#" id='left-side-link'>
+                            <div id='left-side'>
+                                <img id='company-logo' src={require("../images/logo_web.png")} alt="Logo" />
+                                {this.props.userView === true ? (
+                                    <h2 id='company-name'>Bondetous</h2>
+                                ) :
+                                    (
+                                        <h2 id='company-name'>Bondetous <br /> for hosts</h2>
+                                    )
+                                }
+                            </div>
+                        </a>
+                    </nav>
+                </React.Fragment>
+
+            )
         } else {
             return (
                 <React.Fragment>
                     <SideMenu />
                     <nav id='top-bar'>
-                        <div id='left-side'>
-                            <img id='company-logo' src={require("../images/logo_web.png")} alt="Logo" />
-                        </div>
+                        <a href="/#" id='left-side-link'>
+                            <div id='left-side'>
+                                <img id='company-logo' src={require("../images/logo_web.png")} alt="Logo" />
+                                {this.props.userView === false && <h2 id='company-name'>Hosts</h2>}
+                            </div>
+                        </a>
                     </nav>
                 </React.Fragment>
 
