@@ -46,7 +46,7 @@ export default class NavBar extends React.Component {
                     </ul>
                 </nav>
             )
-        } else if (this.state.width > 400) {
+        } else if (this.state.width > 359) {
             return (
                 <React.Fragment>
                     <SideMenu />
