@@ -26,7 +26,7 @@ export default class Platform extends React.Component {
                 <h3 className='section-title'>Our Platform</h3>
                 <p className='section-subtitle'>Convenient storage in just a few taps.</p>
                 <div className='img-div large'>
-                    {this.props.userView === true ?
+                    {/* {this.props.userView === true ?
                         (
                             <React.Fragment>
                                 <img className='platform-img' src={require("../images/screen_user1.png")} alt="User Screen 1" />
@@ -42,9 +42,29 @@ export default class Platform extends React.Component {
                                 <img className='platform-img' src={require("../images/screen_host4.png")} alt="Host Screen 4" />
                             </React.Fragment>
                         )
-                    }
+                    } */}
+                    <div className='left-div'>
+                        <img className='platform-img-web' src={require("../images/web_view1.png")} alt="User Screen 1" />
+                    </div>
+                    <div className='right-div'>
+                        <img className='platform-img-web' src={require("../images/web_view2.png")} alt="User Screen 2" />
+                    </div>
+                    <div className='left-div'>
+                        <img className='platform-img-web' src={require("../images/web_view3.png")} alt="User Screen 3" />
+                    </div>
                 </div>
-                {this.props.userView === true ?
+                <div className='img-div small'>
+                    <div className='left-div'>
+                        <img className='platform-img-web-small' src={require("../images/web_view1.png")} alt="User Screen 1" />
+                    </div>
+                    <div className='right-div'>
+                        <img className='platform-img-web-small' src={require("../images/web_view2.png")} alt="User Screen 2" />
+                    </div>
+                    <div className='left-div'>
+                        <img className='platform-img-web-small' src={require("../images/web_view3.png")} alt="User Screen 3" />
+                    </div>
+                </div>
+                {/* {this.props.userView === true ?
                     <Carousel className='carousel small' showThumbs={false} showIndicators={false} showStatus={false} onChange={this.changeSelected}>
                         <div>
                             <img src={require("../images/screen_user1.png")} alt='User Screen 1' />
@@ -74,7 +94,7 @@ export default class Platform extends React.Component {
                             <img src={require("../images/screen_host4.png")} alt='Host Screen 4' />
                         </div>
                     </Carousel>
-                }
+                } */}
 
             </div>
         )
