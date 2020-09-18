@@ -42,7 +42,7 @@ export default class AboutUs extends React.Component {
             <div className='section about-us' id='about-us-section'>
                 <h3 className='section-title'>Meet the Team</h3>
                 <div className="img-div">
-                    <Carousel className='carousel' showThumbs={false} showIndicators={false} showStatus={false} onChange={this.changeSelected} infiniteLoop={true}>
+                    <Carousel className='carousel' showThumbs={false} showIndicators={true} showStatus={false} onChange={this.changeSelected} infiniteLoop={true}>
                         <div>
                             <img src={require("../images/founder_neel.png")} alt='Profile' />
                         </div>
