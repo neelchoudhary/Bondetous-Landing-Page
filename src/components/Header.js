@@ -18,7 +18,7 @@ export default class Header extends React.Component {
                 <div id='info-card'>
                     <h3>Affordable Storage, <br />On Your Time</h3>
                     <p>Book storage when you want it, where you want it. Risk-free and painlessly.</p>
-                    <button className='sign-up btn-clear' onClick={() => (window.location.href = '#sign-up-section')}>Sign Up</button>
+                    <button className='sign-up btn-clear'><a target="_blank" href='https://platform.spacefaster.com/'>See Beta</a></button>
                     <NavLink to={url} exact>
                         <button className='host-view btn-clear'>{switchBtnText}</button>
                     </NavLink>

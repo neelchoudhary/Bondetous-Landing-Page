@@ -6,6 +6,7 @@ import Interested from './Interested';
 import NavBar from './NavBar';
 import AboutUs from './AboutUs';
 import SignUp from './SignUp';
+import Footer from './Footer';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
 
@@ -52,7 +53,7 @@ function LandingPage({ userView, switchView }) {
       <Platform userView={userView} />
       <Interested userView={userView} />
       <AboutUs userView={userView} />
-      <SignUp userView={userView} />
+      <Footer userView={userView} />
     </React.Fragment>
   )
 }
