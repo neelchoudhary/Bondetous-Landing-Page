@@ -19,35 +19,35 @@ export default class AboutUs extends React.Component {
     }
 
     render() {
-        const JovanFounder = FounderBio({ name: 'Jovan Jean', title: 'CEO', desc: "Jovan Jean is the chief executive officer of Bondetous. Jovan is attending Northeastern University and pursuing a bachelor's degree in computer science with a focus in Artificial Intelligence.", email:'jjean@bondetous.com', linkedin: 'https://www.linkedin.com/in/jean-j'})
-        const NeelFounder = FounderBio({ name: 'Neel Choudhary', title: 'COO', desc: "Neel Choudhary is the chief operating officer of Bondetous. Neel is attending Northeastern University and is pursuing a bachelor’s degree in computer science with a concentration in Artificial intelligence. Neel has experience working in the industry as a software engineer.", email:'choudhary.ne@northeastern.edu', linkedin: 'https://www.linkedin.com/in/neelchoudhary'})
-        const LindaFounder = FounderBio({ name: 'Linda Zeng', title: 'Lead Designer', desc: "Linda Zeng is the lead designer of Bondetous. Linda is attending Northeastern University pursuing a bachelor’s degree in Civil Engineering with a concentration in Structural Engineering and a minor in Experience Design. Her main interests revolve around design, painting, and volunteering.", email:'zeng.lin@northeastern.edu', linkedin: 'https://www.linkedin.com/in/linda-zeng-3809b318b'})
+        const NeelFounder = FounderBio({ name: 'Neel Choudhary', title: 'COO', desc: "Neel Choudhary is the chief operating officer of SpaceFaster. Neel is attending Northeastern University and is pursuing a bachelor’s degree in computer science with a concentration in Artificial intelligence. Neel has experience working in the industry as a software engineer.", email:'choudhary.ne@northeastern.edu', linkedin: 'https://www.linkedin.com/in/neelchoudhary'})
+        const JovanFounder = FounderBio({ name: 'Jovan Jean', title: 'CEO', desc: "Jovan Jean is the chief executive officer of SpaceFaster. Jovan is attending Northeastern University and pursuing a bachelor's degree in computer science with a focus in Artificial Intelligence.", email:'jjean@bondetous.com', linkedin: 'https://www.linkedin.com/in/jean-j'})
+        const LindaFounder = FounderBio({ name: 'Linda Zeng', title: 'Lead Designer', desc: "Linda Zeng is the lead designer of SpaceFaster. Linda is attending Northeastern University pursuing a bachelor’s degree in Civil Engineering with a concentration in Structural Engineering and a minor in Experience Design. Her main interests revolve around design, painting, and volunteering.", email:'zeng.lin@northeastern.edu', linkedin: 'https://www.linkedin.com/in/linda-zeng-3809b318b'})
 
         let Founder;
         if (this.state.selected === 0) {
-            // Jovan
-            Founder = JovanFounder
-        } else if (this.state.selected === 1) {
             // Neel
             Founder = NeelFounder
+        } else if (this.state.selected === 1) {
+            // Jovan
+            Founder = JovanFounder
         } else if (this.state.selected === 2) {
             // Linda
             Founder = LindaFounder
         } else {
-            // Jovan
-            Founder = JovanFounder
+            // Neel
+            Founder = NeelFounder
         }
 
         return (
             <div className='section about-us' id='about-us-section'>
                 <h3 className='section-title'>Meet the Team</h3>
                 <div className="img-div">
-                    <Carousel className='carousel' showThumbs={false} showIndicators={false} showStatus={false} onChange={this.changeSelected} infiniteLoop={true}>
-                        <div>
-                            <img src={require("../images/founder_jovan.png")} alt='Profile' />
-                        </div>
+                    <Carousel className='carousel' showThumbs={false} showIndicators={true} showStatus={false} onChange={this.changeSelected} infiniteLoop={true}>
                         <div>
                             <img src={require("../images/founder_neel.png")} alt='Profile' />
+                        </div>
+                        <div>
+                        <img src={require("../images/founder_jovan.png")} alt='Profile' />
                         </div>
                         <div>
                             <img src={require("../images/founder_linda.png")} alt='Profile' />

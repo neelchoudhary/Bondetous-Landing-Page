@@ -30,10 +30,10 @@ export default class NavBar extends React.Component {
                         <div id='left-side'>
                             <img id='company-logo' src={require("../images/logo_web.png")} alt="Logo" />
                             {this.props.userView === true ? (
-                                <h2 id='company-name'>Bondetous</h2>
+                                <h2 id='company-name'>SpaceFaster</h2>
                             ) :
                                 (
-                                    <h2 id='company-name'>Bondetous <br /> for hosts</h2>
+                                    <h2 id='company-name'>SpaceFaster <br /> for hosts</h2>
                                 )
                             }
                         </div>
@@ -55,10 +55,10 @@ export default class NavBar extends React.Component {
                             <div id='left-side'>
                                 <img id='company-logo' src={require("../images/logo_web.png")} alt="Logo" />
                                 {this.props.userView === true ? (
-                                    <h2 id='company-name'>Bondetous</h2>
+                                    <h2 id='company-name'>SpaceFaster</h2>
                                 ) :
                                     (
-                                        <h2 id='company-name'>Bondetous <br /> for hosts</h2>
+                                        <h2 id='company-name'>SpaceFaster <br /> for hosts</h2>
                                     )
                                 }
                             </div>
