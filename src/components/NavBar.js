@@ -42,7 +42,7 @@ export default class NavBar extends React.Component {
                         <li><a href='#benefits-section'>Benefits</a></li>
                         <li><a href='#platform-section'>Getting Started</a></li>
                         <li><a href='#about-us-section'>About Us</a></li>
-                        <li className='sign-up'><a target="_blank" href='https://platform.spacefaster.com/'>See Beta</a></li>
+                        <li className='sign-up'><a target="_blank" rel="noopener noreferrer" href='https://platform.spacefaster.com/'>See Beta</a></li>
                     </ul>
                 </nav>
             )

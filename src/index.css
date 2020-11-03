@@ -68,6 +68,11 @@ html, body, #app .App {
   color: black;
 }
 
+.section a {
+  text-decoration: none;
+  color: black;
+}
+
 .btn-clear {
   border: none;
   background: transparent;

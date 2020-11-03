@@ -5,8 +5,8 @@ export default class Interested extends React.Component {
     render() {
         return (
             <div className='section sign-up-banner'>
-                <p className='section-subtitle'>Sign up to our mailing list to stay informed.</p>
-                <button className='sign-up btn-clear' onClick={() => (window.location.href='#sign-up-section')}>Sign Up!</button>
+                <p className='section-subtitle'>Sign up on our beta!</p>
+                <button className='sign-up btn-clear'><a target="_blank" rel="noopener noreferrer" href='https://platform.spacefaster.com/signup'>Sign Up!</a></button>
             </div>
         )
     }
