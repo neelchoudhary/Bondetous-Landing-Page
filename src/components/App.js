@@ -5,7 +5,6 @@ import Platform from './Platform';
 import Interested from './Interested';
 import NavBar from './NavBar';
 import AboutUs from './AboutUs';
-import SignUp from './SignUp';
 import Footer from './Footer';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
